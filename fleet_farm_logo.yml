@@ -1,0 +1,13 @@
+---
+- name: Run Fleet Farm logo docker image
+  hosts: localhost
+  become: ues
+  tasks:
+  - name: Pull docker image
+    state: present
+
+  - name: Run docker image
+    docker_container:
+      name: fleet_farm_logo
+      image: adolphsa/fleet_farm_logo:0.0.2
+      state: started

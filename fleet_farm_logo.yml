@@ -1,7 +1,7 @@
 ---
 - name: Run Fleet Farm logo docker image
   hosts: localhost
-  become: ues
+  become: yes
   tasks:
   - name: Pull docker image
     docker_image:

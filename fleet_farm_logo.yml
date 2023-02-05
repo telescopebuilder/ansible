@@ -4,7 +4,9 @@
   become: ues
   tasks:
   - name: Pull docker image
-    state: present
+    docker_image:
+      name: adolphsa/fleet_farm_logo:0.0.2
+      state: present
 
   - name: Run docker image
     docker_container:

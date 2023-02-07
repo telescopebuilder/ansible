@@ -7,3 +7,7 @@
         name: fleet_farm_logo
         image: adolphsa/fleet_farm_logo:0.0.2
         state: started
+        expose:
+          - 8080
+        ports:
+          - "8080:8080"

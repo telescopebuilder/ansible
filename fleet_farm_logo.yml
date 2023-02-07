@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - name: Run the specified Docker image
+    - name: Run the FF logo Docker image
       docker_container:
         name: fleet_farm_logo
         image: adolphsa/fleet_farm_logo:0.0.2

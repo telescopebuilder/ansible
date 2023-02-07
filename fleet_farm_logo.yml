@@ -1,13 +1,9 @@
----
-- name: Run Docker Image
-  hosts: all
-  become: yes
-  become_user: root
-  gather_facts: false
+- name: Run adolphsa/fleet_farm_logo:0.0.2 in Docker
+  hosts: localhost
+  gather_facts: no
   tasks:
-  - name: Launch Docker Container
-    docker_container:
-      name: fleet_farm_logo
-      image: adolphsa/fleet_farm_logo:0.0.2
-      state: present
-      pull: always
+    - name: Run the specified Docker image
+      docker_container:
+        name: fleet_farm_logo
+        image: adolphsa/fleet_farm_logo:0.0.2
+        state: started

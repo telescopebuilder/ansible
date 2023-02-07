@@ -1,5 +1,8 @@
+# ---- NOT WORKING ----  
 - name: Run adolphsa/fleet_farm_logo:0.0.2 in Docker
-  hosts: localhost
+  hosts: all
+  become: yes
+  become_user: root
   gather_facts: no
   tasks:
     - name: Run the FF logo Docker image
